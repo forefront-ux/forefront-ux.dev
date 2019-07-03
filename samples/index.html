@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    body {
+  font-family: sans-serif;
+  background-color: #ccbbee;
+}
+* {
+  transition: color 0.8s cubic-bezier(0.2, 0.8, 0.2, 1),
+    background-color 0.8s cubic-bezier(0.2, 0.8, 0.2, 1),
+    fill 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+#app {
+  background-color: #d1e1ff;
+  padding: 20px;
+  position: relative;
+  min-height: 300px;
+}
+svg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1>Hello Vanilla!</h1>
+        <div>
+          We use Parcel to bundle this sandbox, you can find more info about
+          Parcel
+          <a href="https://parceljs.org" target="_blank" rel="noopener noreferrer"
+            >here</a
+          >.
+        </div>
+        <svg width="100%" height="150" fill="black">
+          <path
+            fill="white"
+          >
+            <animate
+              repeatCount="indefinite"
+              fill="freeze"
+              attributeName="d"
+              dur="10s"
+              values="M0 95.654C277.431 -69.1705 408 11.654 720 95.654C1032 179.654 1207.5 144.328 1440 95.654V387.654H0V95.654Z; M0 51.8168C277 169.163 433 131.471 720 51.8168C1007 -27.8372 1199 -5.83717 1440 51.8168V343.817H0V51.8168Z; M0 69.3411C342 69.3411 652 -51.313 994 25.687C1336 102.687 1354 103.687 1440 69.3411V361.341H0V69.3411Z; M0 95.654C277.431 -69.1705 408 11.654 720 95.654C1032 179.654 1207.5 144.328 1440 95.654V387.654H0V95.654Z "
+            />
+          </path>
+        </svg>
+      </div>
+</body>
+</html>
