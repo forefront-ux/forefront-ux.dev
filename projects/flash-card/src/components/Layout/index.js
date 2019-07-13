@@ -4,7 +4,7 @@ import auth from 'firebase/auth';
 import { getFirebase } from '../../config'
 import { FirebaseContext } from '../../context'
 import SignIn from '../SignIn'
-import Header from '../Header'
+import Dashboard from '../Dashboard';
 import "./index.css"
 
 class Layout extends Component {
@@ -34,22 +34,7 @@ class Layout extends Component {
 
     return (
       <FirebaseContext.Provider value={firebase}>
-        <Header />
-        <div
-            style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `0px 1.0875rem 1.45rem`,
-            paddingTop: 0,
-            }}
-        >
-            <main>{authenticated ? this.props.children : <SignIn />}</main>
-            <footer>
-              © {new Date().getFullYear()}, Built with
-              {` `}
-              <a href="https://www.gatsbyjs.org">Gatsby</a>
-            </footer>
-        </div>
+        {authenticated ? <Dashboard>{this.props.children}</Dashboard> : <SignIn />}
       </FirebaseContext.Provider>
     )
   }
