@@ -11,6 +11,7 @@ class Layout extends Component {
   state = {
     firebase: null,
     authenticated: false,
+    isLoaded: false,
   }
 
   componentDidMount() {
@@ -20,21 +21,22 @@ class Layout extends Component {
 
     firebase.auth().onAuthStateChanged(user => {
       if (!user) {
-        this.setState({ authenticated: false })
+        this.setState({ authenticated: false, isLoaded: true })
       } else {
-        this.setState({ authenticated: true })
+        this.setState({ authenticated: true, isLoaded: true })
       }
     })
   }
 
   render = () => {
-    const { firebase, authenticated } = this.state
+    const { firebase, authenticated, isLoaded } = this.state
 
     if (!firebase) return null
 
     return (
       <FirebaseContext.Provider value={firebase}>
-        {authenticated ? <Dashboard>{this.props.children}</Dashboard> : <SignIn />}
+        {isLoaded && authenticated ? <Dashboard>{this.props.children}</Dashboard> : null}
+        {isLoaded && !authenticated ? <SignIn /> : null}
       </FirebaseContext.Provider>
     )
   }
