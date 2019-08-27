@@ -1,20 +1,25 @@
 // Attractions
-// var imgs = $('.slider12 img');
-// var areaNames = $('.slider12 .slideAreaName');
-// var names = $('.slider12 .heading3');
-// var fastpassList = [];
-// for(var i=0;i<10;i++){
-//   var obj = {
-//     src: imgs[i].src,
-//     alt: imgs[i].alt,
-//     areaName: areaNames[i].innerText,
-//     name: names[i].innerText
+// var lis = document.querySelectorAll('.linkList5.targetList li');
+// var results = [];
+// for(var i=0;i<lis.length;i++) {
+//   var areaName = lis[i].querySelector('.areaName').innerText;
+//   var name = lis[i].querySelector('.headingAreaInner .heading3').innerText;
+//   var src = lis[i].querySelector('img').src;
+//   var alt = lis[i].querySelector('img').alt;
+//   var text = lis[i].querySelector('.listTextArea').innerHTML.trim().replace(/\n\s+/g, '');
+//   var res = {
+//     area: areaName,
+//     name: name,
+//     src: src,
+//     alt: alt,
+//     text: text
 //   };
-//   fastpassList.push(obj);
+//   results.push(res);
 // }
-// JSON.stringify(fastpassList);
+// JSON.stringify(results);
 export default [
   {
+    id: 4,
     area: "メディテレーニアンハーバー",
     name: "ソアリン：ファンタスティック・フライトNEW",
     src:
@@ -24,6 +29,7 @@ export default [
       '<div class="iconTag">ファストパス対象</div><p class="text0">ライドに乗って、世界中の名所や大自然をめぐる雄大な空の旅へ！</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">ライド、シアター、大きな音がする、暗やみをすすむ</div><div class="term">[対象]</div><div class="description">102cm以上OK</div><div class="term">提供：新菱冷熱工業株式会社</div><div class="description"></div></div>'
   },
   {
+    id: 2,
     area: "メディテレーニアンハーバー",
     name:
       "ディズニーシー・トランジットスチーマーライン（メディテレーニアンハーバー）",
@@ -35,6 +41,7 @@ export default [
       '<p class="text0">蒸気船に乗ってゆっくりとした船旅を。</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">ライド、移動・周遊</div><div class="term">[対象]</div><div class="description">身長制限なし</div><div class="term">提供：ENEOS</div><div class="description"></div></div>'
   },
   {
+    id: 3,
     area: "メディテレーニアンハーバー",
     name: "フォートレス・エクスプロレーション",
     src:
@@ -44,6 +51,7 @@ export default [
       '<p class="text0">迷路のような要塞やガリオン船を探索。</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">体験型、暗やみをすすむ</div><div class="term">[対象]</div><div class="description">身長制限なし</div><div class="term">提供：日本ユニシス株式会社</div><div class="description"></div></div>'
   },
   {
+    id: 1,
     area: "メディテレーニアンハーバー",
     name: "ヴェネツィアン・ゴンドラ",
     src:
@@ -53,6 +61,7 @@ export default [
       '<p class="text0">ゴンドラに乗って魅力的な運河の風景とロマンティックな雰囲気を。</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">ライド、移動・周遊</div><div class="term">[対象]</div><div class="description">身長制限なし</div><div class="term">提供：株式会社ユーハイム</div><div class="description"></div></div>'
   },
   {
+    id: 11,
     area: "アメリカンウォーターフロント",
     name: "タートル・トーク",
     src:
@@ -62,6 +71,7 @@ export default [
       '<p class="text0">S.S.コロンビア号の海底展望室でウミガメのクラッシュと楽しくお話しよう！</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">シアタータイプ、雨の日も安心、大きな音がする、暗やみをすすむ</div><div class="term">[対象]</div><div class="description">身長制限なし</div><div class="term">提供：株式会社講談社</div><div class="description"></div></div>'
   },
   {
+    id: 12,
     area: "アメリカンウォーターフロント",
     name: "タワー・オブ・テラー",
     src:
@@ -71,6 +81,7 @@ export default [
       '<div class="iconTag">ファストパス対象</div><p class="text0">エレベーターに乗って最上階へ。恐怖の体験が待ち受けているとも知らず…。</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">ライド、スピード/スリルあり、雨の日も安心、大きな音がする、怖いキャラクターが登場、暗やみをすすむ</div><div class="term">[対象]</div><div class="description">妊娠中の方にはご遠慮いただいております、補助なしで座れることが必要、102cm以上OK</div></div>'
   },
   {
+    id: 13,
     area: "アメリカンウォーターフロント",
     name:
       "ディズニーシー・エレクトリックレールウェイ（アメリカンウォーターフロント）",
@@ -82,6 +93,7 @@ export default [
       '<p class="text0">電動式トロリーに乗って、ポートディスカバリーへ。</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">ライド、移動・周遊、雨の日も安心</div><div class="term">[対象]</div><div class="description">身長制限なし</div><div class="term">提供:株式会社タカラトミー</div><div class="description"></div></div>'
   },
   {
+    id: 14,
     area: "アメリカンウォーターフロント",
     name:
       "ディズニーシー・トランジットスチーマーライン（アメリカンウォーターフロント）",
@@ -93,6 +105,7 @@ export default [
       '<p class="text0">蒸気船に乗ってゆっくりとした船旅を。</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">ライド、移動・周遊</div><div class="term">[対象]</div><div class="description">身長制限なし</div><div class="term">提供：ENEOS</div><div class="description"></div></div>'
   },
   {
+    id: 15,
     area: "アメリカンウォーターフロント",
     name: "トイ・ストーリー・マニア！",
     src:
@@ -102,6 +115,7 @@ export default [
       '<div class="iconTag">ファストパス対象</div><p class="text0">トラムに乗って、ウッディやバズたちと一緒にシューティングゲームを楽しもう！</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">ライド、3D体験、雨の日も安心、大きな音がする、暗やみをすすむ、回転する</div><div class="term">[対象]</div><div class="description">補助なしで座れることが必要、身長制限なし</div><div class="term">提供：花王株式会社</div><div class="description"></div></div>'
   },
   {
+    id: 16,
     area: "アメリカンウォーターフロント",
     name: "ビッグシティ・ヴィークル",
     src:
@@ -111,6 +125,7 @@ export default [
       '<p class="text0">クラシックカーに乗って、アメリカンウォーターフロントを周遊。</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">ライド、移動・周遊</div><div class="term">[対象]</div><div class="description">身長制限なし</div></div>'
   },
   {
+    id: 21,
     area: "ポートディスカバリー",
     name: "アクアトピア",
     src:
@@ -120,6 +135,7 @@ export default [
       '<p class="text0">とつぜん方向を変えたり、くるくる回ったりするウォーターヴィークル。</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">ライド、回転する</div><div class="term">[対象]</div><div class="description">補助なしで座れることが必要、身長制限なし</div></div>'
   },
   {
+    id: 22,
     area: "ポートディスカバリー",
     name: "ディズニーシー・エレクトリックレールウェイ（ポートディスカバリー）",
     src:
@@ -130,6 +146,7 @@ export default [
       '<p class="text0">電動式トロリーに乗って、アメリカンウォーターフロントへ。</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">ライド、移動・周遊、雨の日も安心</div><div class="term">[対象]</div><div class="description">身長制限なし</div><div class="term">提供:株式会社タカラトミー</div><div class="description"></div></div>'
   },
   {
+    id: 23,
     area: "ポートディスカバリー",
     name: "ニモ＆フレンズ・シーライダー",
     src:
@@ -139,6 +156,7 @@ export default [
       '<div class="iconTag">ファストパス対象</div><p class="text0">潜水艇に乗り込んで、海の世界を冒険。</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">ライド、雨の日も安心、大きな音がする、暗やみをすすむ</div><div class="term">[対象]</div><div class="description">妊娠中の方にはご遠慮いただいております、補助なしで座れることが必要、90cm以上OK</div><div class="term">提供：JCB</div><div class="description"></div></div>'
   },
   {
+    id: 31,
     area: "ロストリバーデルタ",
     name: "インディ・ジョーンズ®・アドベンチャー： クリスタルスカルの魔宮",
     src:
@@ -149,6 +167,7 @@ export default [
       '<div class="iconTag">ファストパス対象</div><p class="text0">襲いかかる罠や守護神クリスタルスカルの呪いを、猛スピードですり抜ける！</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">ライド、シングルライダー対象、スピード/スリルあり、雨の日も安心、大きな音がする、怖いキャラクターが登場、暗やみをすすむ</div><div class="term">[対象]</div><div class="description">妊娠中の方にはご遠慮いただいております、117cm以上OK</div><div class="term">提供：Panasonic</div><div class="description"></div></div>'
   },
   {
+    id: 32,
     area: "ロストリバーデルタ",
     name: "ディズニーシー・トランジットスチーマーライン（ロストリバーデルタ）",
     src:
@@ -159,6 +178,7 @@ export default [
       '<p class="text0">蒸気船に乗ってゆっくりとした船旅を。</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">ライド、移動・周遊</div><div class="term">[対象]</div><div class="description">身長制限なし</div><div class="term">提供：ENEOS</div><div class="description"></div></div>'
   },
   {
+    id: 33,
     area: "ロストリバーデルタ",
     name: "レイジングスピリッツ",
     src:
@@ -168,6 +188,7 @@ export default [
       '<div class="iconTag">ファストパス対象</div><p class="text0">古代神の石像の発掘現場をかけ抜ける、360度ループコースター。</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">ライド、シングルライダー対象、スピード/スリルあり、大きな音がする、回転する</div><div class="term">[対象]</div><div class="description">妊娠中の方にはご遠慮いただいております、117cm以上・195cm以下OK</div></div>'
   },
   {
+    id: 41,
     area: "アラビアンコースト",
     name: "キャラバンカルーセル",
     src:
@@ -177,6 +198,7 @@ export default [
       '<p class="text0">宮殿の中庭にあるジーニーやラクダなどの2階建ての回転木馬。</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">ライド、ディズニーの世界を体験、雨の日も安心、回転する</div><div class="term">[対象]</div><div class="description">身長制限なし</div><div class="term">提供：大和ハウス工業株式会社</div><div class="description"></div></div>'
   },
   {
+    id: 42,
     area: "アラビアンコースト",
     name: "ジャスミンのフライングカーペット",
     src:
@@ -186,6 +208,7 @@ export default [
       '<p class="text0">空飛ぶじゅうたんに乗って、ジャスミンの庭園の空中散歩を楽しもう。</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">ライド、ディズニーの世界を体験、回転する</div><div class="term">[対象]</div><div class="description">補助なしで座れることが必要、身長制限なし</div><div class="term">提供：NTTコミュニケーションズ株式会社</div><div class="description"></div></div>'
   },
   {
+    id: 43,
     area: "アラビアンコースト",
     name: "シンドバッド・ストーリーブック・ヴォヤッジ",
     src:
@@ -195,6 +218,7 @@ export default [
       '<p class="text0">シンドバッド、チャンドゥと一緒に冒険の航海へ。</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">ライド、雨の日も安心、暗やみをすすむ</div><div class="term">[対象]</div><div class="description">身長制限なし</div><div class="term">提供：日本通運株式会社</div><div class="description"></div></div>'
   },
   {
+    id: 44,
     area: "アラビアンコースト",
     name: "マジックランプシアター",
     src:
@@ -204,6 +228,7 @@ export default [
       '<div class="iconTag">ファストパス対象</div><p class="text0">世界で一番偉大？なマジシャンと陽気なジーニーのマジックショー。</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">シアタータイプ、3D体験、ディズニーの世界を体験、雨の日も安心、大きな音がする、暗やみをすすむ</div><div class="term">[対象]</div><div class="description">身長制限なし</div><div class="term">提供：富士フイルム株式会社</div><div class="description"></div></div>'
   },
   {
+    id: 51,
     area: "マーメイドラグーン",
     name: "アリエルのプレイグラウンド",
     src:
@@ -213,6 +238,7 @@ export default [
       '<p class="text0">アリエルの遊び場で宝箱をのぞいたり、洞窟を探険したり。</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">体験型、ディズニーの世界を体験、雨の日も安心、大きな音がする、怖いキャラクターが登場、暗やみをすすむ</div><div class="term">[対象]</div><div class="description">身長制限なし</div></div>'
   },
   {
+    id: 52,
     area: "マーメイドラグーン",
     name: "ジャンピン・ジェリーフィッシュ",
     src:
@@ -222,6 +248,7 @@ export default [
       '<p class="text0">貝がらに乗ってクラゲと一緒にアップ・ダウン！</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">ライド、雨の日も安心、暗やみをすすむ</div><div class="term">[対象]</div><div class="description">補助なしで座れることが必要、身長制限なし</div></div>'
   },
   {
+    id: 53,
     area: "マーメイドラグーン",
     name: "スカットルのスクーター",
     src:
@@ -231,6 +258,7 @@ export default [
       '<p class="text0">ヤドカリの背中に乗ってカモメのスカットルの周りをくるくる行進。</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">ライド、回転する</div><div class="term">[対象]</div><div class="description">補助なしで座れることが必要、身長制限なし</div></div>'
   },
   {
+    id: 54,
     area: "マーメイドラグーン",
     name: "フランダーのフライングフィッシュコースター",
     src:
@@ -240,6 +268,7 @@ export default [
       '<p class="text0">潮だまりの上をトビウオに乗ってかけ抜けるかわいいコースター。</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">ライド、スピード/スリルあり、ディズニーの世界を体験</div><div class="term">[対象]</div><div class="description">妊娠中の方にはご遠慮いただいております、補助なしで座れることが必要、90cm以上OK</div></div>'
   },
   {
+    id: 55,
     area: "マーメイドラグーン",
     name: "ブローフィッシュ・バルーンレース",
     src:
@@ -249,6 +278,7 @@ export default [
       '<p class="text0">貝がらに乗って、フグたちが輪になって泳ぐレースに参加。</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">ライド、ディズニーの世界を体験、雨の日も安心、暗やみをすすむ、回転する</div><div class="term">[対象]</div><div class="description">身長制限なし</div></div>'
   },
   {
+    id: 56,
     area: "マーメイドラグーン",
     name: "マーメイドラグーンシアター",
     src:
@@ -258,6 +288,7 @@ export default [
       '<div class="iconTag">ファストパス対象</div><p class="text0">まるで海底にいるかのような空間で、ディズニー映画『リトル・マーメイド』のアリエルと仲間たちが贈る新しいミュージカルショーを楽しもう！</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">シアタータイプ、ディズニーの世界を体験、雨の日も安心、大きな音がする、暗やみをすすむ</div><div class="term">[対象]</div><div class="description">身長制限なし</div><div class="term">提供：ダイハツ工業株式会社</div><div class="description"></div></div>'
   },
   {
+    id: 57,
     area: "マーメイドラグーン",
     name: "ワールプール",
     src:
@@ -267,6 +298,7 @@ export default [
       '<p class="text0">ぐるぐる回る海藻でできたカップ。</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">ライド、雨の日も安心、暗やみをすすむ、回転する</div><div class="term">[対象]</div><div class="description">身長制限なし</div></div>'
   },
   {
+    id: 61,
     area: "ミステリアスアイランド",
     name: "海底2万マイル",
     src:
@@ -276,6 +308,7 @@ export default [
       '<div class="iconTag">ファストパス対象</div><p class="text0">小型潜水艇に乗って神秘的な海底探索の任務を体験。</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">ライド、雨の日も安心、大きな音がする、怖いキャラクターが登場、暗やみをすすむ</div><div class="term">[対象]</div><div class="description">身長制限なし</div><div class="term">提供：日本コカ･コーラ株式会社 </div><div class="description"></div></div>'
   },
   {
+    id: 62,
     area: "ミステリアスアイランド",
     name: "センター・オブ・ジ・アース",
     src:

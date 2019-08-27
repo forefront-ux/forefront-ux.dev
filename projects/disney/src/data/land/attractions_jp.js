@@ -19,6 +19,7 @@
 
 export default [
   {
+    id: 1,
     area: "ワールドバザール",
     name: "オムニバス",
     src:
@@ -28,6 +29,7 @@ export default [
       '<p class="text0">2階建てバスに乗ってプラザを一周。</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">ライド、移動・周遊  </div><div class="term">[対象]</div><div class="description">身長制限なし</div></div>'
   },
   {
+    id: 2,
     area: "ワールドバザール",
     name: "ペニーアーケード",
     src:
@@ -37,6 +39,7 @@ export default [
       '<p class="text0">古き良きアメリカのゲーム場。</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">ゲーム、雨の日も安心  </div><div class="term">[対象]</div><div class="description">身長制限なし</div></div>'
   },
   {
+    id: 11,
     area: "アドベンチャーランド",
     name: "ウエスタンリバー鉄道",
     src:
@@ -46,6 +49,7 @@ export default [
       '<p class="text0">蒸気機関車に乗ってアメリカ西部をめぐる旅へ出発。</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">ライド、移動・周遊、大きな音がする、暗やみをすすむ</div><div class="term">[対象]</div><div class="description">身長制限なし</div><div class="term">提供：株式会社タカラトミー</div><div class="description"></div></div>'
   },
   {
+    id: 12,
     area: "アドベンチャーランド",
     name: "カリブの海賊",
     src:
@@ -55,6 +59,7 @@ export default [
       '<p class="text0">冒険とスリルに満ちた船旅に出発！そこにはキャプテン・ジャック・スパロウも。</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">ライド、スピード/スリルあり、雨の日も安心、大きな音がする、怖いキャラクターが登場、暗やみをすすむ</div><div class="term">[対象]</div><div class="description">補助なしで座れることが必要、身長制限なし</div><div class="term">提供：キリンビール/キリンビバレッジ</div><div class="description"></div></div>'
   },
   {
+    id: 13,
     area: "アドベンチャーランド",
     name: "ジャングルクルーズ：ワイルドライフ・エクスペディション",
     src:
@@ -64,6 +69,7 @@ export default [
       '<p class="text0">ゆかいな船長と一緒に、野生の動物たちが住む神秘的なジャングルを探険！</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">ライド、移動・周遊、暗やみをすすむ</div><div class="term">[対象]</div><div class="description">身長制限なし</div><div class="term">提供：ENEOS</div><div class="description"></div></div>'
   },
   {
+    id: 14,
     area: "アドベンチャーランド",
     name: "スイスファミリー・ツリーハウス",
     src:
@@ -73,6 +79,7 @@ export default [
       '<p class="text0">無人島にたどり着いたロビンソン一家が暮らした大きな木の家を散策。</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">ウォークスルー、体験型</div><div class="term">[対象]</div><div class="description">身長制限なし</div><div class="term">提供：株式会社ユーハイム</div><div class="description"></div></div>'
   },
   {
+    id: 15,
     area: "アドベンチャーランド",
     name: "魅惑のチキルーム：スティッチ・プレゼンツ“アロハ・エ・コモ・マイ！”",
     src:
@@ -83,6 +90,7 @@ export default [
       '<p class="text0">鳥たちが繰り広げる魅惑のショーに、いたずら好きのスティッチが！</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">シアタータイプ、雨の日も安心、大きな音がする、暗やみをすすむ</div><div class="term">[対象]</div><div class="description">身長制限なし</div><div class="term">提供：みずほ証券株式会社</div><div class="description"></div></div>'
   },
   {
+    id: 21,
     area: "ウエスタンランド",
     name: "ウエスタンランド・シューティングギャラリー",
     src:
@@ -92,6 +100,7 @@ export default [
       '<p class="text0">西部一のガンマンをめざして射撃の腕試し！</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">体験型</div><div class="term">[対象]</div><div class="description">身長制限なし</div></div>'
   },
   {
+    id: 22,
     area: "ウエスタンランド",
     name: "カントリーベア・シアター",
     src:
@@ -101,6 +110,7 @@ export default [
       '<p class="text0">個性あふれるゆかいなクマたちのにぎやかなコンサート。</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">シアタータイプ、雨の日も安心、暗やみをすすむ</div><div class="term">[対象]</div><div class="description">身長制限なし</div><div class="term">提供：ハウス食品株式会社</div><div class="description"></div></div>'
   },
   {
+    id: 23,
     area: "ウエスタンランド",
     name: "蒸気船マークトウェイン号",
     src:
@@ -110,6 +120,7 @@ export default [
       '<p class="text0">優雅な蒸気船でアメリカ河を一周。</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">ライド、移動・周遊</div><div class="term">[対象]</div><div class="description">身長制限なし</div><div class="term">提供：新菱冷熱工業株式会社</div><div class="description"></div></div>'
   },
   {
+    id: 24,
     area: "ウエスタンランド",
     name: "トムソーヤ島いかだ",
     src:
@@ -119,6 +130,7 @@ export default [
       '<p class="text0">アメリカ河を渡り、楽しい冒険に満ちたトムソーヤ島へ。</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">ライド、移動・周遊</div><div class="term">[対象]</div><div class="description">身長制限なし</div></div>'
   },
   {
+    id: 25,
     area: "ウエスタンランド",
     name: "ビッグサンダー・マウンテン",
     src:
@@ -128,6 +140,7 @@ export default [
       '<div class="iconTag">ファストパス対象</div><p class="text0">鉱山列車が、荒野を急旋回、急降下しながら大爆走！</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">ライド、スピード/スリルあり、大きな音がする、暗やみをすすむ</div><div class="term">[対象]</div><div class="description">妊娠中の方にはご遠慮いただいております、102cm以上OK</div><div class="term">提供：第一生命保険株式会社</div><div class="description"></div></div>'
   },
   {
+    id: 31,
     area: "クリッターカントリー",
     name: "スプラッシュ・マウンテン",
     src:
@@ -137,6 +150,7 @@ export default [
       '<div class="iconTag">ファストパス対象</div><p class="text0">丸太のボートでスリル満点の旅へ！</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">ライド、シングルライダー対象、スピード/スリルあり、暗やみをすすむ</div><div class="term">[対象]</div><div class="description">妊娠中の方にはご遠慮いただいております、90cm以上OK</div><div class="term">提供：花王株式会社</div><div class="description"></div></div>'
   },
   {
+    id: 32,
     area: "クリッターカントリー",
     name: "ビーバーブラザーズのカヌー探険",
     src:
@@ -146,6 +160,7 @@ export default [
       '<p class="text0">みんなでカヌーをこいで出発！</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">体験型、移動・周遊</div><div class="term">[対象]</div><div class="description">補助なしで座れることが必要</div></div>'
   },
   {
+    id: 41,
     area: "ファンタジーランド",
     name: "アリスのティーパーティー",
     src:
@@ -155,6 +170,7 @@ export default [
       '<p class="text0">くるくる回るティーカップ。ふしぎの国のお茶会へようこそ！</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">ライド、回転する</div><div class="term">[対象]</div><div class="description">身長制限なし</div></div>'
   },
   {
+    id: 42,
     area: "ファンタジーランド",
     name: "イッツ・ア・スモールワールド",
     src:
@@ -164,6 +180,7 @@ export default [
       '<p class="text0">世界中の子どもたちの歌声に包まれる、世界で一番幸せな船旅。</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">ライド、雨の日も安心</div><div class="term">[対象]</div><div class="description">身長制限なし</div><div class="term">提供：日本通運株式会社</div><div class="description"></div></div>'
   },
   {
+    id: 43,
     area: "ファンタジーランド",
     name: "キャッスルカルーセル",
     src:
@@ -173,6 +190,7 @@ export default [
       '<p class="text0">バンドオルガンの美しい音色に合わせて走る白馬たち。</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">ライド、回転する</div><div class="term">[対象]</div><div class="description">補助なしで座れることが必要、身長制限なし</div></div>'
   },
   {
+    id: 44,
     area: "ファンタジーランド",
     name: "白雪姫と七人のこびと",
     src:
@@ -182,6 +200,7 @@ export default [
       '<p class="text0">トロッコに乗って冒険に出発。暗い森の中には恐ろしい魔女が…。</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">ライド、雨の日も安心、怖いキャラクターが登場、暗やみをすすむ</div><div class="term">[対象]</div><div class="description">補助なしで座れることが必要、身長制限なし</div></div>'
   },
   {
+    id: 45,
     area: "ファンタジーランド",
     name: "シンデレラのフェアリーテイル・ホール",
     src:
@@ -191,6 +210,7 @@ export default [
       '<p class="text0">お城の中は、あこがれのシンデレラの世界！玉座やガラスの靴が見られます。</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">体験型、雨の日も安心</div><div class="term">[対象]</div><div class="description">身長制限なし</div></div>'
   },
   {
+    id: 46,
     area: "ファンタジーランド",
     name: "空飛ぶダンボ",
     src:
@@ -200,6 +220,7 @@ export default [
       '<p class="text0">ダンボの背中に乗って大空へ。</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">ライド、回転する</div><div class="term">[対象]</div><div class="description">補助なしで座れることが必要、身長制限なし</div></div>'
   },
   {
+    id: 47,
     area: "ファンタジーランド",
     name: "ピーターパン空の旅",
     src:
@@ -209,6 +230,7 @@ export default [
       '<p class="text0">空飛ぶ海賊船に乗って、ネバーランドへ。</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">ライド、雨の日も安心、暗やみをすすむ</div><div class="term">[対象]</div><div class="description">補助なしで座れることが必要、身長制限なし</div><div class="term">提供：NTTコミュニケーションズ株式会社</div><div class="description"></div></div>'
   },
   {
+    id: 48,
     area: "ファンタジーランド",
     name: "ピノキオの冒険旅行",
     src:
@@ -218,6 +240,7 @@ export default [
       '<p class="text0">トロッコに乗って、冒険の旅へ出発！</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">ライド、雨の日も安心、暗やみをすすむ</div><div class="term">[対象]</div><div class="description">補助なしで座れることが必要、身長制限なし</div></div>'
   },
   {
+    id: 49,
     area: "ファンタジーランド",
     name: "プーさんのハニーハント",
     src:
@@ -227,6 +250,7 @@ export default [
       '<div class="iconTag">ファストパス対象</div><p class="text0">ハニーポットに乗って、プーさんの大好きなはちみつを探しにいこう！</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">ライド、雨の日も安心、大きな音がする、暗やみをすすむ、回転する</div><div class="term">[対象]</div><div class="description">補助なしで座れることが必要、身長制限なし</div></div>'
   },
   {
+    id: 50,
     area: "ファンタジーランド",
     name: "ホーンテッドマンション",
     src:
@@ -236,6 +260,7 @@ export default [
       '<div class="iconTag">ファストパス対象</div><p class="text0">999の幽霊たちが住んでいる館。</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">ライド、雨の日も安心、大きな音がする、怖いキャラクターが登場、暗やみをすすむ</div><div class="term">[対象]</div><div class="description">身長制限なし</div></div>'
   },
   {
+    id: 51,
     area: "ファンタジーランド",
     name: "ミッキーのフィルハーマジック",
     src:
@@ -245,6 +270,7 @@ export default [
       '<p class="text0">ミッキーが指揮するコンサートが、ドナルドのせいで予想外の展開に！</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">シアタータイプ、3D体験、雨の日も安心、大きな音がする、暗やみをすすむ</div><div class="term">[対象]</div><div class="description">身長制限なし</div><div class="term">提供：日本航空</div><div class="description"></div></div>'
   },
   {
+    id: 61,
     area: "トゥーンタウン",
     name: "ガジェットのゴーコースター",
     src:
@@ -254,6 +280,7 @@ export default [
       '<p class="text0">トゥーンタウンの天才発明家、ガジェットがつくったドングリのコースター。</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">ライド、スピード/スリルあり</div><div class="term">[対象]</div><div class="description">妊娠中の方にはご遠慮いただいております、補助なしで座れることが必要、90cm以上OK</div></div>'
   },
   {
+    id: 62,
     area: "トゥーンタウン",
     name: "グーフィーのペイント＆プレイハウス",
     src:
@@ -263,6 +290,7 @@ export default [
       '<p class="text0">ペンキ噴射装置を使って、グーフィーの部屋を楽しく模様替え！</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">体験型、雨の日も安心</div><div class="term">[対象]</div><div class="description">身長制限なし</div></div>'
   },
   {
+    id: 63,
     area: "トゥーンタウン",
     name: "チップとデールのツリーハウス",
     src:
@@ -272,6 +300,7 @@ export default [
       '<p class="text0">チップとデールのお家が見られるよ！</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">体験型</div><div class="term">[対象]</div><div class="description">身長制限なし</div></div>'
   },
   {
+    id: 64,
     area: "トゥーンタウン",
     name: "トゥーンパーク",
     src:
@@ -281,6 +310,7 @@ export default [
       '<p class="text0">ミッキーが子どもたちのためにつくった彫刻で楽しく遊ぼう！</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">体験型</div><div class="term">[対象]</div><div class="description">身長制限なし</div></div>'
   },
   {
+    id: 65,
     area: "トゥーンタウン",
     name: "ドナルドのボート",
     src:
@@ -290,6 +320,7 @@ export default [
       '<p class="text0">汽笛やベルを鳴らして遊ぼう！</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">体験型</div><div class="term">[対象]</div><div class="description">身長制限なし</div></div>'
   },
   {
+    id: 66,
     area: "トゥーンタウン",
     name: "ミニーの家",
     src:
@@ -299,6 +330,7 @@ export default [
       '<p class="text0">おしゃれで料理が大好きなミニーのお部屋が見られるよ！</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">体験型、ディズニーの世界を体験、雨の日も安心</div><div class="term">[対象]</div><div class="description">身長制限なし</div></div>'
   },
   {
+    id: 67,
     area: "トゥーンタウン",
     name: "ロジャーラビットのカートゥーンスピン",
     src:
@@ -308,6 +340,7 @@ export default [
       '<p class="text0">スピンするキャブに乗って、ロジャーラビットたちを助けに行こう！</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">体験型、ディズニーの世界を体験、雨の日も安心</div><div class="term">[対象]</div><div class="description">身長制限なし</div></div>'
   },
   {
+    id: 81,
     area: "トゥモローランド",
     name: "スター・ツアーズ：ザ・アドベンチャーズ・コンティニュー",
     src:
@@ -317,6 +350,7 @@ export default [
       '<div class="iconTag">ファストパス対象</div><p class="text0">スタースピーダー1000に乗って、スリリングで予測不能な冒険の旅へ。</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">ライド、スピード/スリルあり、3D体験、雨の日も安心、大きな音がする、暗やみをすすむ</div><div class="term">[対象]</div><div class="description">妊娠中の方にはご遠慮いただいております、102cm以上OK</div><div class="term">提供：JCB</div><div class="description"></div></div>'
   },
   {
+    id: 82,
     area: "トゥモローランド",
     name: "スティッチ・エンカウンター",
     src:
@@ -326,6 +360,7 @@ export default [
       '<p class="text0">いたずら好きのスティッチと、ユーモアたっぷりのおしゃべりを楽しもう！</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">シアタータイプ、雨の日も安心、大きな音がする、暗やみをすすむ</div><div class="term">[対象]</div><div class="description">身長制限なし</div><div class="term">提供：大和ハウス工業株式会社</div><div class="description"></div></div>'
   },
   {
+    id: 83,
     area: "トゥモローランド",
     name: "スペース・マウンテン",
     src:
@@ -335,6 +370,7 @@ export default [
       '<div class="iconTag">ファストパス対象</div><p class="text0">銀河系や流星群の間をハイスピードで駆け抜けるスリリングな宇宙旅行。</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">ライド、スピード/スリルあり、雨の日も安心、大きな音がする、暗やみをすすむ</div><div class="term">[対象]</div><div class="description">妊娠中の方にはご遠慮いただいております、102cm以上OK</div><div class="term">提供：日本コカ･コーラ株式会社</div><div class="description"></div></div>'
   },
   {
+    id: 84,
     area: "トゥモローランド",
     name: "バズ・ライトイヤーのアストロブラスター",
     src:
@@ -344,6 +380,7 @@ export default [
       '<div class="iconTag">ファストパス対象</div><p class="text0">スペースクルーザーに乗って、光線銃で悪の帝王ザーグたちをやっつけろ！</p><div class="definitionList"><div class="term">[タイプ]</div><div class="description">ライド、雨の日も安心、大きな音がする、暗やみをすすむ、回転する</div><div class="term">[対象]</div><div class="description">身長制限なし</div><div class="term">提供：富士フイルム株式会社</div><div class="description"></div></div>'
   },
   {
+    id: 85,
     area: "トゥモローランド",
     name: "モンスターズ・インク“ライド＆ゴーシーク！”",
     src:

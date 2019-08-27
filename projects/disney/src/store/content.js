@@ -1,4 +1,6 @@
 import { observable } from 'mobx'
+import orderBy from 'lodash/orderBy'
+import groupBy from 'lodash/groupBy'
 import dataLandAttractionsCN from '../data/land/attractions_cn'
 import dataLandAttractionsEN from '../data/land/attractions_en'
 import dataLandAttractionsJP from '../data/land/attractions_jp'
@@ -23,6 +25,13 @@ import dataLandShowJP from '../data/land/show_jp'
 import dataSeaShowCN from '../data/sea/show_cn'
 import dataSeaShowEN from '../data/sea/show_en'
 import dataSeaShowJP from '../data/sea/show_jp'
+import dataLandAreaCN from '../data/land/area_cn'
+import dataLandAreaEN from '../data/land/area_en'
+import dataLandAreaJP from '../data/land/area_jp'
+import dataSeaAreaCN from '../data/sea/area_cn'
+import dataSeaAreaEN from '../data/sea/area_en'
+import dataSeaAreaJP from '../data/sea/area_jp'
+
 
 const contentStore = observable({
   languages: ['en', 'cn', 'jp'],
@@ -39,17 +48,19 @@ const contentStore = observable({
       cn: ['迪士尼乐园', '迪士尼海洋'],
       jp: ['東京ディズニーランド', '東京ディズニーシー']
   },
-  currentParkIndex: 0,
-  currentPark: 'land',
+  currentParkIndex: 1,
+  currentPark: 'sea',
   data: {
     en: {
       land: {
+        area: dataLandAreaEN,
         attractions: dataLandAttractionsEN,
         attractions_with_fastpass: dataLandAttractionsWFEN,
         meet_charaters: dataLandMeetCharactersEN,
         show: dataLandShowEN
       },
       sea: {
+        area: dataSeaAreaEN,
         attractions: dataSeaAttractionsEN,
         attractions_with_fastpass: dataSeaAttractionsWFEN,
         meet_charaters: dataSeaMeetCharactersEN,
@@ -58,12 +69,14 @@ const contentStore = observable({
     },
     cn: {
       land: {
+        area: dataLandAreaCN,
         attractions: dataLandAttractionsCN,
         attractions_with_fastpass: dataLandAttractionsWFCN,
         meet_charaters: dataLandMeetCharactersCN,
         show: dataLandShowCN
       },
       sea: {
+        area: dataSeaAreaCN,
         attractions: dataSeaAttractionsCN,
         attractions_with_fastpass: dataSeaAttractionsWFCN,
         meet_charaters: dataSeaMeetCharactersCN,
@@ -72,12 +85,14 @@ const contentStore = observable({
     },
     jp: {
       land: {
+        area: dataLandAreaJP,
         attractions: dataLandAttractionsJP,
         attractions_with_fastpass: dataLandAttractionsWFJP,
         meet_charaters: dataLandMeetCharactersJP,
         show: dataLandShowJP
       },
       sea: {
+        area: dataSeaAreaJP,
         attractions: dataSeaAttractionsJP,
         attractions_with_fastpass: dataSeaAttractionsWFJP,
         meet_charaters: dataSeaMeetCharactersJP,
@@ -86,12 +101,20 @@ const contentStore = observable({
     },
   },
   setLng(index) {
-    this.currentLngIndex = index < 0 ? 0 : index;
-    this.currentLng = index < 0 ? 'en' : this.languages[index];
+    this.currentLngIndex = index < 0 ? 0 : index
+    this.currentLng = index < 0 ? 'en' : this.languages[index]
   },
   setPark(index) {
-    this.currentParkIndex = index < 0 ? 0: index;
-    this.currentPark = index < 0 ? 'land' : this.parks[index];
+    this.currentParkIndex = index < 0 ? 0: index
+    this.currentPark = index < 0 ? 'land' : this.parks[index]
+  },
+  getAttractions(currentLng = 'en', currentPark = 'sea') {
+    const areas = this.data[currentLng][currentPark].area
+    const attractions = groupBy(orderBy(this.data[currentLng][currentPark].attractions, 'id', 'asc'), 'area')
+    return areas.map(area => ({
+      ...area,
+      attractions: attractions[area.name]
+    }))
   }
 })
 export default contentStore

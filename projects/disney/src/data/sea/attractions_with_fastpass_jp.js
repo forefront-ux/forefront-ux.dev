@@ -1,23 +1,19 @@
 // ファストパス対象アトラクション
 // Attractions with Fast Pass
-// var lis = document.querySelectorAll('.linkList5.targetList li');
-// var results = [];
-// for(var i=0;i<lis.length;i++) {
-//   var areaName = lis[i].querySelector('.areaName').innerText;
-//   var name = lis[i].querySelector('.headingAreaInner .heading3').innerText;
-//   var src = lis[i].querySelector('img').src;
-//   var alt = lis[i].querySelector('img').alt;
-//   var text = lis[i].querySelector('.listTextArea').innerHTML.trim().replace(/\n\s+/g, '');
-//   var res = {
-//     area: areaName,
-//     name: name,
-//     src: src,
-//     alt: alt,
-//     text: text
+// var imgs = $('.slider12 img');
+// var areaNames = $('.slider12 .slideAreaName');
+// var names = $('.slider12 .heading3');
+// var fastpassList = [];
+// for(var i=0;i<10;i++){
+//   var obj = {
+//     src: imgs[i].src,
+//     alt: imgs[i].alt,
+//     areaName: areaNames[i].innerText,
+//     name: names[i].innerText
 //   };
-//   results.push(res);
+//   fastpassList.push(obj);
 // }
-// JSON.stringify(results);
+// JSON.stringify(fastpassList);
 export default [
   {
     src:

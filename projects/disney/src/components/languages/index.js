@@ -1,6 +1,7 @@
 import Taro, { Component } from '@tarojs/taro'
 import { AtTabBar } from 'taro-ui'
 import { observer, inject } from '@tarojs/mobx'
+import './index.scss'
 
 @inject('contentStore')
 @observer
