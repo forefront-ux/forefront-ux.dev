@@ -1,6 +1,8 @@
 import Taro, { Component } from '@tarojs/taro'
+import { View } from '@tarojs/components'
 import { AtSegmentedControl } from 'taro-ui'
 import { observer, inject } from '@tarojs/mobx'
+import './index.scss'
 
 @inject('contentStore')
 @observer
@@ -16,11 +18,13 @@ class Parks extends Component {
   render () {
     const { contentStore: { parkTitles, currentLng, currentParkIndex } } = this.props
     return (
-      <AtSegmentedControl
-        values={parkTitles[currentLng].slice()}
-        onClick={this.handleClick}
-        current={currentParkIndex}
-      />
+      <View className='parks'>
+        <AtSegmentedControl
+          values={parkTitles[currentLng].slice()}
+          onClick={this.handleClick}
+          current={currentParkIndex}
+        />
+      </View>
     )
   }
 }
