@@ -2,9 +2,9 @@ import Taro, { Component } from '@tarojs/taro'
 import { View } from '@tarojs/components'
 import { observer, inject } from '@tarojs/mobx'
 import Languages from '../../components/languages'
-import Parks from '../../components/parks'
 import Attractions from '../../components/attractions'
-import './index.scss'
+import Nav from '../../components/nav'
+import Filter from '../../components/filter'
 
 @inject('contentStore')
 @observer
@@ -15,9 +15,12 @@ class Index extends Component {
   }
 
   render () {
+    const { contentStore: { filterShow, statusBarHeight }} = this.props;
+    const pagePaddingTop = (statusBarHeight + 40) + 'px';
     return (
-      <View className='land'>
-        <Parks />
+      <View style={{ paddingTop: pagePaddingTop }}>
+        <Nav />
+        {filterShow ? <Filter /> : null}
         <Attractions />
         <Languages />
       </View>

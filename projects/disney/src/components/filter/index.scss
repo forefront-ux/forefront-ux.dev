@@ -1,0 +1,13 @@
+@import "~taro-ui/dist/style/components/segmented-control.scss";
+@import "~taro-ui/dist/style/components/divider.scss";
+@import "~taro-ui/dist/style/components/switch.scss";
+
+.filter {
+  position: fixed;
+  left: 10px;
+  z-index: 2;
+  background: #FFF;
+  border: none;
+  box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.3);
+  font-size: 16px;
+}

@@ -1,4 +1,5 @@
 import { observable } from 'mobx'
+import Taro from '@tarojs/taro'
 import orderBy from 'lodash/orderBy'
 import groupBy from 'lodash/groupBy'
 import dataLandAttractionsCN from '../data/land/attractions_cn'
@@ -32,8 +33,10 @@ import dataSeaAreaCN from '../data/sea/area_cn'
 import dataSeaAreaEN from '../data/sea/area_en'
 import dataSeaAreaJP from '../data/sea/area_jp'
 
+const systemInfo = Taro.getSystemInfoSync()
 
 const contentStore = observable({
+  statusBarHeight: systemInfo.statusBarHeight,
   languages: ['en', 'cn', 'jp'],
   languageTitles: [
     { title: 'English' },
@@ -46,10 +49,34 @@ const contentStore = observable({
   parkTitles: {
       en: ['Disney Land', 'Disney Sea'],
       cn: ['迪士尼乐园', '迪士尼海洋'],
-      jp: ['東京ディズニーランド', '東京ディズニーシー']
+      jp: ['ディズニーランド', 'ディズニーシー']
   },
   currentParkIndex: 1,
   currentPark: 'sea',
+  types: ['attraction', 'show', 'character'],
+  typesTitles: {
+    en: {
+      attraction: 'Attractions',
+      show: 'Parades and Shows',
+      character: 'Character Greetings'
+    },
+    cn: {
+      attraction: '游乐设施',
+      show: '游行娱乐表演',
+      character: '明星迎宾会'
+    },
+    jp: {
+      attraction: 'アトラクション',
+      show: 'パレード/ショー',
+      character: 'キャラクターグリーティング'
+    }
+  },
+  typesFilter: {
+    attraction: true,
+    show: false,
+    character: false
+  },
+  filterShow: false,
   data: {
     en: {
       land: {
@@ -107,6 +134,15 @@ const contentStore = observable({
   setPark(index) {
     this.currentParkIndex = index < 0 ? 0: index
     this.currentPark = index < 0 ? 'land' : this.parks[index]
+  },
+  setTypeFilter(filter) {
+    this.typesFilter = {
+      ...this.typesFilter,
+      ...filter
+    }
+  },
+  toggleFilter() {
+    this.filterShow = !this.filterShow;
   },
   getAttractions(currentLng = 'en', currentPark = 'sea') {
     const areas = this.data[currentLng][currentPark].area
