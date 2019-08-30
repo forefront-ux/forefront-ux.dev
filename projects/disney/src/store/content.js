@@ -37,22 +37,34 @@ const systemInfo = Taro.getSystemInfoSync()
 
 const contentStore = observable({
   statusBarHeight: systemInfo.statusBarHeight,
+  cancelText: {
+    en: 'Cancel',
+    cn: '取消',
+    jp: 'キャンセル'
+  },
   languages: ['en', 'cn', 'jp'],
   languageTitles: [
     { title: 'English' },
     { title: '简体中文' },
     { title: '日本语' }
   ],
-  currentLngIndex: 0,
-  currentLng: 'en',
+  currentLngIndex: 1,
+  currentLng: 'cn',
+  languagesShow: false,
   parks: ['land', 'sea'],
   parkTitles: {
-      en: ['Disney Land', 'Disney Sea'],
-      cn: ['迪士尼乐园', '迪士尼海洋'],
-      jp: ['ディズニーランド', 'ディズニーシー']
+    en: ['Disney Land', 'Disney Sea'],
+    cn: ['迪士尼乐园', '迪士尼海洋'],
+    jp: ['ディズニーランド', 'ディズニーシー']
   },
   currentParkIndex: 1,
   currentPark: 'sea',
+  parksShow: false,
+  categories: {
+    en: 'Interesting',
+    cn: '兴趣',
+    jp: '楽しみ方'
+  },
   types: ['attraction', 'show', 'character'],
   typesTitles: {
     en: {
@@ -141,8 +153,27 @@ const contentStore = observable({
       ...filter
     }
   },
-  toggleFilter() {
+  toggleLanguages() {
+    this.languagesShow = !this.languagesShow;
+  },
+  toggleParks() {
+    this.parksShow = !this.parksShow;
+  },
+  toggleCategroies() {
     this.filterShow = !this.filterShow;
+  },
+  getTabbarText(currentLng) {
+    return [
+      {
+        title: this.categories[currentLng]
+      },
+      {
+        title: this.parkTitles[currentLng][this.currentParkIndex]
+      },
+      {
+        title: this.languageTitles[this.currentLngIndex].title
+      }
+    ]
   },
   getAttractions(currentLng = 'en', currentPark = 'sea') {
     const areas = this.data[currentLng][currentPark].area

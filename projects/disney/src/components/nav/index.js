@@ -19,10 +19,8 @@ class Nav extends Component {
     return (
       <View className='nav' style={{ paddingTop: statusBarHeight + 'px'}}>
         <AtNavBar
-          onClickLeftIcon={this.handleClick}
           color='#000'
           title={parkTitles[currentLng][currentParkIndex]}
-          leftIconType='filter'
         />
       </View>
     )
