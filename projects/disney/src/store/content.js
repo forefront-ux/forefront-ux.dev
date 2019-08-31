@@ -1,6 +1,5 @@
 import { observable } from 'mobx'
 import Taro from '@tarojs/taro'
-import orderBy from 'lodash/orderBy'
 import groupBy from 'lodash/groupBy'
 import dataLandAttractionsCN from '../data/land/attractions_cn'
 import dataLandAttractionsEN from '../data/land/attractions_en'
@@ -8,12 +7,6 @@ import dataLandAttractionsJP from '../data/land/attractions_jp'
 import dataSeaAttractionsCN from '../data/sea/attractions_cn'
 import dataSeaAttractionsEN from '../data/sea/attractions_en'
 import dataSeaAttractionsJP from '../data/sea/attractions_jp'
-import dataLandAttractionsWFCN from '../data/land/attractions_with_fastpass_cn'
-import dataLandAttractionsWFEN from '../data/land/attractions_with_fastpass_en'
-import dataLandAttractionsWFJP from '../data/land/attractions_with_fastpass_jp'
-import dataSeaAttractionsWFCN from '../data/sea/attractions_with_fastpass_cn'
-import dataSeaAttractionsWFEN from '../data/sea/attractions_with_fastpass_en'
-import dataSeaAttractionsWFJP from '../data/sea/attractions_with_fastpass_jp'
 import dataLandMeetCharactersCN from '../data/land/meet_characters_cn'
 import dataLandMeetCharactersEN from '../data/land/meet_characters_en'
 import dataLandMeetCharactersJP from '../data/land/meet_characters_jp'
@@ -85,8 +78,8 @@ const contentStore = observable({
   },
   typesFilter: {
     attraction: true,
-    show: false,
-    character: false
+    show: true,
+    character: true
   },
   filterShow: false,
   data: {
@@ -94,14 +87,12 @@ const contentStore = observable({
       land: {
         area: dataLandAreaEN,
         attractions: dataLandAttractionsEN,
-        attractions_with_fastpass: dataLandAttractionsWFEN,
         meet_charaters: dataLandMeetCharactersEN,
         show: dataLandShowEN
       },
       sea: {
         area: dataSeaAreaEN,
         attractions: dataSeaAttractionsEN,
-        attractions_with_fastpass: dataSeaAttractionsWFEN,
         meet_charaters: dataSeaMeetCharactersEN,
         show: dataSeaShowEN
       }
@@ -110,14 +101,12 @@ const contentStore = observable({
       land: {
         area: dataLandAreaCN,
         attractions: dataLandAttractionsCN,
-        attractions_with_fastpass: dataLandAttractionsWFCN,
         meet_charaters: dataLandMeetCharactersCN,
         show: dataLandShowCN
       },
       sea: {
         area: dataSeaAreaCN,
         attractions: dataSeaAttractionsCN,
-        attractions_with_fastpass: dataSeaAttractionsWFCN,
         meet_charaters: dataSeaMeetCharactersCN,
         show: dataSeaShowCN
       }
@@ -126,14 +115,12 @@ const contentStore = observable({
       land: {
         area: dataLandAreaJP,
         attractions: dataLandAttractionsJP,
-        attractions_with_fastpass: dataLandAttractionsWFJP,
         meet_charaters: dataLandMeetCharactersJP,
         show: dataLandShowJP
       },
       sea: {
         area: dataSeaAreaJP,
         attractions: dataSeaAttractionsJP,
-        attractions_with_fastpass: dataSeaAttractionsWFJP,
         meet_charaters: dataSeaMeetCharactersJP,
         show: dataSeaShowJP
       }
@@ -150,7 +137,7 @@ const contentStore = observable({
   setTypeFilter(filter) {
     this.typesFilter = {
       ...this.typesFilter,
-      ...filter
+      [filter]: !this.typesFilter[filter]
     }
   },
   toggleLanguages() {
@@ -177,10 +164,14 @@ const contentStore = observable({
   },
   getAttractions(currentLng = 'en', currentPark = 'sea') {
     const areas = this.data[currentLng][currentPark].area
-    const attractions = groupBy(orderBy(this.data[currentLng][currentPark].attractions, 'id', 'asc'), 'area')
+    const attractions = groupBy(this.data[currentLng][currentPark].attractions, 'area')
+    const shows = groupBy(this.data[currentLng][currentPark].show, 'area')
+    const characters = groupBy(this.data[currentLng][currentPark].meet_charaters, 'area')
     return areas.map(area => ({
       ...area,
-      attractions: attractions[area.name]
+      attractions: attractions[area.name] || [],
+      shows: shows[area.name] || [],
+      characters: characters[area.name] || []
     }))
   }
 })

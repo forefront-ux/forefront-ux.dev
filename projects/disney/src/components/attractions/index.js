@@ -19,7 +19,8 @@ class Attractions extends Component {
       5: false,
       6: false,
       7: false,
-      8: false
+      8: false,
+      9: false,
     }
     this.handleClick = this.handleClick.bind(this);
   }
@@ -29,22 +30,28 @@ class Attractions extends Component {
     })
   }
   render () {
-    const { contentStore: { currentLng, currentPark } } = this.props
+    const { contentStore: { currentLng, currentPark, typesFilter: { attraction, show, character } } } = this.props
     const results = this.props.contentStore.getAttractions(currentLng, currentPark);
-    return (
-      <View className='list'>
-        {results.map(result => (
-          <AtAccordion
-            key={result.id}
-            open={this.state[result.id]}
-            onClick={value => this.handleClick(result.id, value)}
-            title={result.name}
-          >
-            <AttractionItems attractions={result.attractions} />
-          </AtAccordion>
-        ))}
-      </View>
-    )
+    if (show || attraction || character) {
+      return (
+        <View className='list'>
+          {results.map(result => ((show && result.shows.length) || (attraction && result.attractions.length) || (character && result.characters.length)) && (
+              <AtAccordion
+                key={result.id}
+                open={this.state[result.id]}
+                onClick={value => this.handleClick(result.id, value)}
+                title={result.name}
+              >
+                {show ? <AttractionItems items={result.shows} type='show' /> : null}
+                {attraction ? <AttractionItems items={result.attractions} type='attraction' /> : null}
+                {character  ? <AttractionItems items={result.characters} type='character' /> : null}
+              </AtAccordion>
+            ))
+          }
+        </View>
+      )
+    }
+    return null;
   }
 }
 

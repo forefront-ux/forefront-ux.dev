@@ -1,4 +1,7 @@
 export default [{
+  id: 0,
+  name: 'パークワイド'
+},{
   id: 1,
   name: 'メディテレーニアンハーバー'
 }, {
@@ -19,4 +22,7 @@ export default [{
 }, {
   id: 7,
   name: 'ミステリアスアイランド'
+}, {
+  id: 8,
+  name: 'エントランス'
 }]

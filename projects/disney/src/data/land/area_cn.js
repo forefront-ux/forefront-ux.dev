@@ -1,4 +1,7 @@
 export default [{
+  id: 0,
+  name: '园区全域'
+},{
   id: 1,
   name: '世界市集'
 }, {

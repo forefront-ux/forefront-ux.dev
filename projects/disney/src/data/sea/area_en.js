@@ -1,4 +1,7 @@
 export default [{
+  id: 0,
+  name: 'Park-wide'
+},{
   id: 1,
   name: 'Mediterranean Harbor'
 }, {
@@ -19,4 +22,7 @@ export default [{
 }, {
   id: 7,
   name: 'Mysterious Island'
+}, {
+  id: 8,
+  name: 'Entrance'
 }]

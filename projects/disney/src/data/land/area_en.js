@@ -1,4 +1,7 @@
 export default [{
+  id: 0,
+  name: 'Park-wide'
+},{
   id: 1,
   name: 'World Bazaar'
 }, {

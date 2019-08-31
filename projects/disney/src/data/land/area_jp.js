@@ -1,4 +1,7 @@
 export default [{
+  id: 0,
+  name: 'パークワイド'
+},{
   id: 1,
   name: 'ワールドバザール'
 }, {

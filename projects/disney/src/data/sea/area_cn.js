@@ -1,4 +1,7 @@
 export default [{
+  id: 0,
+  name: '园区全域'
+}, {
   id: 1,
   name: '地中海港湾'
 }, {
@@ -19,4 +22,7 @@ export default [{
 }, {
   id: 7,
   name: '神秘岛'
+}, {
+  id: 8,
+  name: '入园口'
 }]
