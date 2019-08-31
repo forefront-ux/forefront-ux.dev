@@ -1,20 +1,19 @@
 .list-item {
   font-size: 24px;
-  padding: 20px;
-  margin: 0;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  padding: 12px 16px;
+  margin: 30px 16px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: top;
-  background: rgba(#07c, 0.1);
+  border-radius: 16px;
+  box-shadow: 4px 8px 10px rgba(#07c, 0.5);
 
   &.show {
-    background: rgba(#707, 0.1);
+    box-shadow: 4px 8px 10px rgba(#707, 0.5);
   }
   &.character {
-    background: rgba(pink, 0.1);
+    box-shadow: 4px 8px 10px rgba(pink, 0.5);
   }
 }
 .list-image {
@@ -38,11 +37,6 @@
   color: #999;
   margin-bottom: 20px;
 }
-.definition {
-  margin-top: 20px;
-  font-size: 18px;
-  color: #999;
-}
 .list-item-hot {
   margin-top: 20px;
 }
@@ -51,11 +45,17 @@
   border-radius: 20px;
   background: #07c;
   color: #fff;
+  margin-right: 20px;
 }
 .list-item-new {
-  margin-left: 20px;
   padding: 4px 20px;
   border-radius: 20px;
   background: #c70c27;
   color: #fff;
 }
+.definition {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #999;
+}
+
