@@ -5,8 +5,7 @@ export default [
     src:
       "https://media1.tokyodisneyresort.jp/images/adventure/greeting/234_thum_name.jpg?mod=20190820103456",
     alt: "ウッドチャック・グリーティングトレイル（ドナルド）のイメージ",
-    text:
-      '<div class="definitionList"><div class="term">[キャラクター]</div><div class="description">ドナルドダック</div><div class="term">提供：J:COM</div><div class="description"></div></div>'
+    definitions: [{ name: "[キャラクター]", value: "ドナルドダック" }]
   },
   {
     area: "ウエスタンランド",
@@ -14,8 +13,7 @@ export default [
     src:
       "https://media1.tokyodisneyresort.jp/images/adventure/greeting/241_thum_name.jpg?mod=20190820103652",
     alt: "ウッドチャック・グリーティングトレイル（デイジー）のイメージ",
-    text:
-      '<div class="definitionList"><div class="term">[キャラクター]</div><div class="description">デイジｰダック</div><div class="term">提供：J:COM</div><div class="description"></div></div>'
+    definitions: [{ name: "[キャラクター]", value: "デイジｰダック" }]
   },
   {
     area: "ウエスタンランド",
@@ -23,8 +21,11 @@ export default [
     src:
       "https://media1.tokyodisneyresort.jp/images/adventure/greeting/276_thum_name.jpg?mod=20190820103619",
     alt: "プラザパビリオン・バンドスタンド前のイメージ",
-    text:
-      '<div class="iconTag">整理券必須</div><div class="definitionList"><div class="term">[キャラクター]</div><div class="description">ジュディ・ホップス、ニック・ワイルド</div></div>'
+    nameDesc: "2019年2月4日（月）～",
+    iconTag: "整理券必須",
+    definitions: [
+      { name: "[キャラクター]", value: "ジュディ・ホップス、ニック・ワイルド" }
+    ]
   },
   {
     area: "トゥーンタウン",
@@ -32,7 +33,6 @@ export default [
     src:
       "https://media1.tokyodisneyresort.jp/images/adventure/greeting/1_thum_name.jpg?mod=20190820103542",
     alt: "ミッキーの家とミート・ミッキーのイメージ",
-    text:
-      '<div class="definitionList"><div class="term">[キャラクター]</div><div class="description">ミッキーマウス</div></div>'
+    definitions: [{ name: "[キャラクター]", value: "ミッキーマウス" }]
   }
 ];

@@ -5,8 +5,9 @@ export default [
     src:
       "https://media1.tokyodisneyresort.jp/images/adventure/greeting/234_thum_name.jpg?mod=20190820103456",
     alt: "image of Woodchuck Greeting Trail (Donald)",
-    text:
-      '<div class="definitionList"><div class="term">[Participating Disney Characters]</div><div class="description">Donald Duck</div><div class="term">Presented by: J:COM</div><div class="description"></div></div>'
+    definitions: [
+      { name: "[Participating Disney Characters]", value: "Donald Duck" }
+    ]
   },
   {
     area: "Westernland",
@@ -14,8 +15,9 @@ export default [
     src:
       "https://media1.tokyodisneyresort.jp/images/adventure/greeting/241_thum_name.jpg?mod=20190820103652",
     alt: "image of Woodchuck Greeting Trail (Daisy)",
-    text:
-      '<div class="definitionList"><div class="term">[Participating Disney Characters]</div><div class="description">Daisy Duck</div><div class="term">Presented by: J:COM</div><div class="description"></div></div>'
+    definitions: [
+      { name: "[Participating Disney Characters]", value: "Daisy Duck" }
+    ]
   },
   {
     area: "Westernland",
@@ -23,8 +25,14 @@ export default [
     src:
       "https://media1.tokyodisneyresort.jp/images/adventure/greeting/276_thum_name.jpg?mod=20190820103619",
     alt: "image of In front of Plaza Pavilion Bandstand",
-    text:
-      '<div class="iconTag">Special ticket required</div><div class="definitionList"><div class="term">Participating Disney Characters</div><div class="description">Judy Hopps, Nick Wilde</div></div>'
+    nameDesc: "From February 4, 2019",
+    iconTag: "Special ticket required",
+    definitions: [
+      {
+        name: "Participating Disney Characters",
+        value: "Judy Hopps, Nick Wilde"
+      }
+    ]
   },
   {
     area: "Toontown",
@@ -32,7 +40,8 @@ export default [
     src:
       "https://media1.tokyodisneyresort.jp/images/adventure/greeting/1_thum_name.jpg?mod=20190820103542",
     alt: "image of Mickey's House and Meet Mickey",
-    text:
-      '<div class="definitionList"><div class="term">[Participating Disney Characters]</div><div class="description">Mickey Mouse</div></div>'
+    definitions: [
+      { name: "[Participating Disney Characters]", value: "Mickey Mouse" }
+    ]
   }
 ];

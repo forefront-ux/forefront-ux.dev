@@ -5,8 +5,7 @@ export default [
     src:
       "https://media1.tokyodisneyresort.jp/images/adventure/greeting/31_thum_name.jpg?mod=20190725131316",
     alt: "ヴィレッジ・グリーティングプレイスのイメージ",
-    text:
-      '<div class="definitionList"><div class="term">[キャラクター]</div><div class="description">シェリーメイ</div></div>'
+    definitions: [{ name: "[キャラクター]", value: "シェリーメイ" }]
   },
   {
     area: "アメリカンウォーターフロント",
@@ -14,8 +13,7 @@ export default [
     src:
       "https://media1.tokyodisneyresort.jp/images/adventure/greeting/81_thum_name.jpg?mod=20190726180048",
     alt: "ウォーターフロントパークのイメージ",
-    text:
-      '<div class="definitionList"><div class="term">[キャラクター]</div><div class="description">当日のお楽しみ</div></div>'
+    definitions: [{ name: "[キャラクター]", value: "当日のお楽しみ" }]
   },
   {
     area: "ロストリバーデルタ",
@@ -23,8 +21,7 @@ export default [
     src:
       "https://media1.tokyodisneyresort.jp/images/adventure/greeting/51_thum_name.jpg?mod=20190614112627",
     alt: "“サルードス・アミーゴス！”グリーティングドックのイメージ",
-    text:
-      '<div class="definitionList"><div class="term">[キャラクター]</div><div class="description">ダッフィー</div></div>'
+    definitions: [{ name: "[キャラクター]", value: "ダッフィー" }]
   },
   {
     area: "ロストリバーデルタ",
@@ -32,8 +29,7 @@ export default [
     src:
       "https://media1.tokyodisneyresort.jp/images/adventure/greeting/41_thum_name.jpg?mod=20190626161003",
     alt: "ミッキー＆フレンズ・グリーティングトレイル（ミッキー）のイメージ",
-    text:
-      '<div class="definitionList"><div class="term">[キャラクター]</div><div class="description">ミッキーマウス</div></div>'
+    definitions: [{ name: "[キャラクター]", value: "ミッキーマウス" }]
   },
   {
     area: "ロストリバーデルタ",
@@ -41,8 +37,7 @@ export default [
     src:
       "https://media1.tokyodisneyresort.jp/images/adventure/greeting/101_thum_name.jpg?mod=20190626154211",
     alt: "ミッキー＆フレンズ・グリーティングトレイル（ミニー）のイメージ",
-    text:
-      '<div class="definitionList"><div class="term">[キャラクター]</div><div class="description">ミニーマウス</div></div>'
+    definitions: [{ name: "[キャラクター]", value: "ミニーマウス" }]
   },
   {
     area: "ロストリバーデルタ",
@@ -50,8 +45,7 @@ export default [
     src:
       "https://media1.tokyodisneyresort.jp/images/adventure/greeting/111_thum_name.jpg?mod=20190626160408",
     alt: "ミッキー＆フレンズ・グリーティングトレイル（ドナルド）のイメージ",
-    text:
-      '<div class="definitionList"><div class="term">[キャラクター]</div><div class="description">ドナルド</div></div>'
+    definitions: [{ name: "[キャラクター]", value: "ドナルド" }]
   },
   {
     area: "アラビアンコースト",
@@ -59,17 +53,17 @@ export default [
     src:
       "https://media1.tokyodisneyresort.jp/images/adventure/greeting/91_thum_name.jpg?mod=20180828154837",
     alt: "アラビアンコーストのイメージ",
-    text:
-      '<div class="definitionList"><div class="term">[キャラクター]</div><div class="description">当日のお楽しみ</div></div>'
+    definitions: [{ name: "[キャラクター]", value: "当日のお楽しみ" }]
   },
   {
     area: "マーメイドラグーン",
     name: "アリエルのグリーティンググロット",
     src:
-      "https://media1.tokyodisneyresort.jp/images/adventure/greeting/61_thum_name.jpg?mod=20190204131519",
+      "https://media1.tokyodisneyresort.jp/images/adventure/greeting/61_thum_name.jpg?mod=20190826153535",
     alt: "アリエルのグリーティンググロットのイメージ",
-    text:
-      '<div class="definitionList"><div class="term">[キャラクター]</div><div class="description">アリエル</div></div>'
+    nameDesc:
+      "「アリエルのグリーティンググロット」は、2020年3月31日（火）をもって運営終了いたします。",
+    definitions: [{ name: "[キャラクター]", value: "アリエル" }]
   },
   {
     area: "エントランス",
@@ -77,7 +71,6 @@ export default [
     src:
       "https://media1.tokyodisneyresort.jp/images/adventure/greeting/71_thum_name.jpg?mod=20190326101024",
     alt: "ディズニーシー･プラザのイメージ",
-    text:
-      '<div class="definitionList"><div class="term">[キャラクター]</div><div class="description">当日のお楽しみ</div></div>'
+    definitions: [{ name: "[キャラクター]", value: "当日のお楽しみ" }]
   }
 ];
