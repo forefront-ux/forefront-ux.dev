@@ -41,6 +41,7 @@ class Attractions extends Component {
                 open={this.state[result.id]}
                 onClick={value => this.handleClick(result.id, value)}
                 title={result.name}
+                hasBorder={false}
               >
                 {show ? <AttractionItems items={result.shows} type='show' /> : null}
                 {attraction ? <AttractionItems items={result.attractions} type='attraction' /> : null}
